@@ -62,7 +62,7 @@ public class MessageService implements IDao<Message> {
 			ps.setInt(1, id);
 			ResultSet rs = ps.executeQuery();
 			if (rs.next()) {
-				employe = new Message(rs.getInt("id"), rs.getString("objet"), rs.getString("sujet"), rs.getDate("date"),
+				employe = new Message(rs.getString("objet"), rs.getString("sujet"), rs.getDate("date"),
 						es.getById(rs.getInt("idE")), es.getById(rs.getInt("idR")));
 			}
 		} catch (SQLException ex) {
@@ -81,7 +81,7 @@ public class MessageService implements IDao<Message> {
 			PreparedStatement ps = Connexion.getConnection().prepareStatement(req);
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
-				employes.add(new Message(rs.getInt("id"), rs.getString("objet"), rs.getString("sujet"),
+				employes.add(new Message(rs.getString("objet"), rs.getString("sujet"),
 						rs.getDate("date"), es.getById(rs.getInt("idE")), es.getById(rs.getInt("idR"))));
 			}
 		} catch (SQLException ex) {

@@ -18,15 +18,6 @@ public class Message {
 		this.empRecepteur = empRecepteur;
 	}
 
-	public Message(int id, String object, String sujet, Date date, Employe empEmetteur, Employe empRecepteur) {
-
-		this.object = object;
-		this.sujet = sujet;
-		this.date = date;
-		this.empEmetteur = empEmetteur;
-		this.empRecepteur = empRecepteur;
-	}
-
 	
 
 	

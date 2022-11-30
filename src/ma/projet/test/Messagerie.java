@@ -24,7 +24,7 @@ public class Messagerie {
 		}
 
 		// Suppression d'un employe
-		es.delete(es.getById(4));
+		//es.delete(es.getById(3));
 
 		// Liste des employes
 		for (Employe emp : es.getAll())
@@ -33,12 +33,10 @@ public class Messagerie {
 		EmployeService es1 = new EmployeService();
 		MessageService ms = new MessageService();
 		ms.create(new Message("Réunion", "Réunion de fin d'année", new Date(0), es1.getById(1), es1.getById(2)));
-		ms.create(new Message("Réunion", "Réunion de fin d'année", new Date(0), es1.getById(1), es1.getById(3)));
 		ms.create(new Message("Stage", "Stage à Marrakech", new Date(0), es1.getById(2), es1.getById(1)));
-		ms.create(new Message("Stage", "Stage à Marrakech", new Date(0), es1.getById(2), es1.getById(3)));
         //Les message reçus par l'employé 3
 		for (Message m : ms.getAll()) {
-			if (m.getEmpRecepteur().getId() == 3)
+			if (m.getEmpRecepteur().getId() == 2)
 				System.out.println("" + m.getSujet());
 
 		}

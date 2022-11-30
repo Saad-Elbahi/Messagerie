@@ -76,7 +76,7 @@ public class EmployeService implements IDao<Employe> {
 		 } catch (SQLException ex) {
 		 Logger.getLogger(EmployeService.class.getName()).log(Level.SEVERE, null, ex);
 		 }
-		return null;
+		return employe;
 	}
 
 	@Override

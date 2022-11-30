@@ -9,7 +9,7 @@ public class Connexion {
 	private static Connection connection;
 	 static {
 	 try {
-	 FileInputStream f = new FileInputStream("/Messagerie/src/Base.properties");
+	 FileInputStream f = new FileInputStream("Base.properties");
 	 Properties p = new Properties();
 	 p.load(f);
 	 String url = p.getProperty("jdbc.url");
